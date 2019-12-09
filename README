@@ -1,0 +1,9 @@
+
+### install BUSCO with: conda install -c bioconda busco
+
+### Download a gene set that is closest to your species. diptera is the closest for me: https://busco.ezlab.org/datasets/diptera_odb9.tar.gz
+### augustus --species=help will give you a list of all available species to choose from. 
+
+/home/jondoe/anaconda2/bin/python /home/jondoe/anaconda2/bin/run_BUSCO.py -i hificanu_aws.fasta -l ~/bin/busco_db/diptera_odb9 -o hificanu_aws -m genome -f --cpu 44 -sp culex
+
+
