@@ -6,4 +6,11 @@
 
 /home/jondoe/anaconda2/bin/python /home/jondoe/anaconda2/bin/run_BUSCO.py -i hificanu_aws.fasta -l ~/bin/busco_db/diptera_odb9 -o hificanu_aws -m genome -f --cpu 44 -sp culex
 
+# on cluster:
+module load busco
+
+which augustus
+cp -r /share/apps/augustus-3.2.3/config augustus/config   (#mkdir augustus in a local directory where you have write permissions)
+export AUGUSTUS_CONFIG_PATH="path/to/new/augustus/config/"
+BUSCO.py -i male_tarsalis_hifi_nofilter.contigs.fasta -l ~/bin/busco_DB/diptera_odb9 -o male_tarsalis_hifi_nofilter.contigs.fasta_busco -m genome -f -c 1 -sp culex
 
